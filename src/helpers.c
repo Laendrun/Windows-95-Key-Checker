@@ -2,21 +2,26 @@
 
 int	put_error(char *m1, char *m2)
 {
-	while (m1 && *m1)
-		write(STDERR_FILENO, m1++, 1);
-	while (m2 && *m2)
-		write(STDERR_FILENO, m2++, 2);
-	write(STDERR_FILENO, "\n", 1);
+	dprintf(STDERR_FILENO, "%s", _RED);
+	if (m1 && *m1)
+		dprintf(STDERR_FILENO, "%s", m1);
+	if (m2 && *m2)
+		dprintf(STDERR_FILENO, "%s", m2);
+	dprintf(STDERR_FILENO, "\n%s", _RESET);
 	return (1);
 }
 
 int	put_res(char *m1, char *m2)
 {
-	while (m1 && *m1)
-		write(STDOUT_FILENO, m1++, 1);
-	while (m2 && *m2)
-		write(STDOUT_FILENO, m2++, 1);
-	write(STDOUT_FILENO, "\n", 1);
+	if (!m2)
+		dprintf(STDOUT_FILENO, "%s", _RED);
+	else
+		dprintf(STDOUT_FILENO, "%s", _GREEN);
+	if (m1 && *m1)
+		dprintf(STDOUT_FILENO, "%s", m1);
+	if (m2 && *m2)
+		dprintf(STDOUT_FILENO, "%s", m2);
+	dprintf(STDOUT_FILENO, "\n%s", _RESET);
 	return (0);
 }
 

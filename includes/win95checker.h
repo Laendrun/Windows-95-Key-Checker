@@ -6,6 +6,10 @@
 # include <stdio.h>
 # include <string.h>
 
+# define _RESET "\033[0;39m"
+# define _RED "\033[0;91m"
+# define _GREEN "\033[0;92m"
+
 // src/main.c
 int		check_oem(char *key);
 int		check_ab(char *key);
