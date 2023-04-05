@@ -4,7 +4,33 @@ I saw today an article about someone who asked ChatGPT to generate Windows 95 ke
 
 I then made some research, and now I want to implement a simple Microsoft Windows 95 activation key checker, that checks if a key is a valid Windows 95 activation key or not.
 
-## Quick intro to activations key
+## Quick intro to activation keys
+
+An activation key, for a software in this case, is a way for a user to authenticate himself.
+
+It let's your computer (or the software publisher) know you paid the software, and have the rights to use it.
+
+Today, a license key is usually checked against a database of valid key somewhere on the Internet, preventing the use of the same key multiple times.
+
+Back in the days, as Internet wasn't as broadly distributed as today, most of the software that required activation keys came with a key validation in the software itself.
+
+It was the case for Windows 95, during the installation, the activation key was verified locally. It was also simpler, since most softwares were bought via a CD or DVD install and the activation key was written on the disk itself.
+
+The advantage of a local check is that it does not require an internet access to validate, but can be more easily tricked.
+
+Let's take a little look at a Windows 10 install.
+
+You can easily download and install Windows 10 on your machine and not activate it. If you need it to be activated for one reason or an other, you can simply buy a license key and have it sent to you via email. Then, when you enter the key you bought it is validated online.
+
+The advantage of having the key validated online is that each and every activation can be disabled by the software publisher if a problem is encounterd.
+
+Bigger companies usually get a really big list of valid license, and when they want to activate one of their computer, they can "simply" ask the computer to pick the first available license in this list.
+
+These list have obviously been leaked on the internet and are still used today by some people to activate their Windows install for free via a simple script.
+
+> (Click [here](https://github.com/Chaxiraxi/Windows-Cracker) to go to one of the repo that does that).
+
+And in that case, the software cannot revoke a single specific license, the whole list has to be revoked, and they don't want to do that to avoid having big companies complain to them since all of their machines will not be activated anymore.
 
 ## Windows 95 Activation Key format
 
