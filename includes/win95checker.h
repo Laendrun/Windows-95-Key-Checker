@@ -10,9 +10,12 @@
 int		check_oem(char *key);
 int		check_ab(char *key);
 int		check_pers(char *key);
+int		check_first_part(char *key);
+int		check_mod7(char *key);
 
 // src/helpers.c
 int		put_error(char *m1, char *m2);
+int		put_res(char *m1, char *m2);
 int		type_ok(char *s, int *t);
 
 #endif
